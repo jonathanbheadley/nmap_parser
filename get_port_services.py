@@ -28,7 +28,7 @@ SCRIPT_MAPPING = {
     "2049": '--script=nfs-ls.nse,nfs-showmount.nse,nfs-statfs.nse',
     "8080": '--script "banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)"',
 }
-def get_scripts(port: str) -> str:
+def get_scripts(port):
     return SCRIPT_MAPPING.get(port, "")
 
 
