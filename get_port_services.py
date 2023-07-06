@@ -1,6 +1,5 @@
 #!/home/kali/scripts/nmap_parser/venv/bin/python
 
-from get_open_ports import arguments
 import argparse
 import sys
 from libnmap.process import NmapProcess
