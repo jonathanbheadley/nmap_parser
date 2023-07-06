@@ -6,10 +6,10 @@ from libnmap.parser import NmapParser
 from libnmap.objects.report import NmapReport
 from get_port_services import get_scripts
 
-gvar = None
+GVAR = None
 
 def arguments():
-    gvar
+    GVAR
     parser = argparse.ArgumentParser()
     parser.add_argument('infile', nargs="?", type=argparse.FileType("r"), default=sys.stdin)
     parser.add_argument('outfile', nargs="?", type=argparse.FileType("w"), default=sys.stdout)
@@ -28,8 +28,7 @@ def main():
     print(f"Writing output to {ARGS.outfile.name}")
     ports = open_ports(nmap_report)
     print(json.dumps(ports, indent=2), file=ARGS.outfile)
-    parser.append()
-    gvar
+    GVAR
 
     get_scripts()
 
